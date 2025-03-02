@@ -11,6 +11,15 @@ mongoose.connect("mongodb+srv://althaf1504:<OmSe5kO1WMCB3XyK>@tenantdb.v8b3d.mon
   useUnifiedTopology: true,
 });
 
+const mongoose = require("mongoose");
+require("dotenv").config();
+
+mongoose
+  .connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("✅ Connected to MongoDB"))
+  .catch((err) => console.error("❌ MongoDB Connection Error:", err));
+
+
 const tenantSchema = new mongoose.Schema({
   name: String,
   dob: String,
