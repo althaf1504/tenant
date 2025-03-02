@@ -6,7 +6,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect("your_mongodb_uri", {
+mongoose.connect("mongodb+srv://althaf1504:<OmSe5kO1WMCB3XyK>@tenantdb.v8b3d.mongodb.net/?retryWrites=true&w=majority&appName=TenantDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
